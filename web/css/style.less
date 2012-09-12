@@ -1,0 +1,243 @@
+body, div, span, p, h1, h2, h3, h4, h5, h6, input {
+    font-family: 'Fredoka One';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/red-bg.jpg');
+    .background-size(cover);
+    font-size: 15px;
+    overflow: hidden;
+    text-align: center;
+
+    h1 {
+        font-family: 'Bangers';
+        text-shadow: 1px 2px #000;
+        color: #ffa;
+        font-size: 50px;
+    }
+    
+    h3 {
+        font-size: 15px;
+        color: #ff5;
+    }
+    
+    input {
+        .border-radius(10px);
+        border: 3px solid rgba(255,255,255,0.5);
+        font-size: 20px;
+        font-weight: bold;
+        &[type="text"] {
+            padding: 5px 0px;
+            background: #fff;
+            color: black;
+            text-align: center;
+        }
+        &[type="button"] {
+            background-color: rgb(44,122,190);
+            .linear-gradient(top, rgb(2,163,218) 0%, rgb(44,122,190) 100%);
+            .box-shadow(inset -2px -2px 0px rgba(0,0,0,0.5), inset 2px 2px 0px rgba(255,255,255,0.2));
+            color: #fff;
+            padding: 5px 50px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        &[disabled="disabled"], &:active {
+            .box-shadow(inset 2px 2px 0px rgba(0,0,0,0.5), inset -2px -2px 0px rgba(255,255,255,0.2));
+        }
+    }
+    
+    .highscore {
+        #highscores {
+            width: 250px;
+            min-height: 200px;
+            text-align: left;
+            margin: auto;
+            margin-top: 50px;
+            color: white;
+            font-family: 'Bangers';
+            font-size: 30px;
+            color: #faf;
+            span {
+                margin-right: 30px;
+                color: #aaf;
+            }
+        }
+    }
+    
+    .submitscore {
+        select {
+            font-size: 20px;
+        }
+        #tryagain {
+            padding: 5px 35px;
+            font-size: 20px;
+            background-color: rgb(232,113,80);
+            .linear-gradient(top, rgb(243,125,91) 0%, rgb(232,113,80) 100%);
+        }
+    }
+    
+    .banner {
+        img {
+            margin-top: 10px;
+            width: 200px;
+        }
+    }
+    
+    .tip {
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        h3 {
+            width: 90%;
+            margin: auto;
+            background-color: rgba(0,0,0,0.6);
+            .border-radius(10px);
+            border: 2px solid rgba(0,0,0,0.6);
+            color: yellow;
+            font-size: 20px;
+            text-shadow: 2px 2px #000;
+            padding: 5px 10px;
+            span {
+                font-size: 20px;
+                color: white;
+            }
+        }
+        .down-arrow {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-top: 15px solid rgba(0,0,0,0.8);
+            border-right: 15px solid transparent;
+        }
+    }
+    
+    .ingame {
+        #lives {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-family: 'Bangers';
+            font-size: 20px;
+            color: @blue;
+            .transition(font-size 0.3s);
+            &.bump {
+                .transition(none);
+                font-size: 25px;
+            }
+        }
+        #points {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'Bangers';
+            font-size: 20px;
+            color: @peach;
+            .transition(font-size 0.3s);
+            &.bump {
+                .transition(none);
+                font-size: 25px;
+            }
+        }
+        .burger {
+            width: 60px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            .transition(top 0.3s, left 0.3s, width 0.3s);
+            &.shrink {
+                width: 0px;
+                left: 30px;
+                top: 30px;
+            }
+        }
+        .cat {
+            position: absolute;
+            bottom: -10px;
+            left: 130px;
+            width: 80px;
+            .transition(bottom 0.3s);
+            &.jump {
+                .transition(none);
+                bottom: 0px
+            }
+            &.sink {
+                bottom: -120px;
+            }
+        }
+        .tip {
+            bottom: 5px;
+        }
+    }
+        
+}
+
+/* Nice colors */
+@blue: rgb(124, 182, 231);
+@peach: rgb(245, 125,91);
+@lime: rgb(160, 197, 0);
+@fuschia: rgb(209, 91, 130);
+@white: rgb(220, 220, 220);
+@teal: rgb(0, 161, 205);
+@violet: rgb(130, 105, 188);
+@jade: rgb(61, 183, 136);
+
+/* Browser prefix templates */
+.opacity(@a) {
+    opacity: @a;
+    @ie-opacity: 100 * @a;
+    filter: e(%("alpha(opacity=%s)", @ie-opacity));
+}
+.border-radius(@a) {
+    -webkit-border-radius: @a;
+    -moz-border-radius: @a;
+    border-radius: @a;
+}
+.box-shadow(@a) {
+    -webkit-box-shadow: @a;
+    -moz-box-shadow: @a;
+    box-shadow: @a;
+}
+.box-shadow(@a, @b) {
+    -webkit-box-shadow: @a, @b;
+    -moz-box-shadow: @a, @b;
+    box-shadow: @a, @b;
+}
+.box-shadow(@a, @b, @c) {
+    -webkit-box-shadow: @a, @b, @c;
+    -moz-box-shadow: @a, @b, @c;
+    box-shadow: @a, @b, @c;
+}
+.radial-gradient(@a, @b, @c, @d) {
+    background-image: -webkit-radial-gradient(@a, @b, @c, @d);
+    background-image: -moz-radial-gradient(@a, @b, @c, @d);
+    background-image: -ms-radial-gradient(@a, @b, @c, @d);
+    background-image: -o-radial-gradient(@a, @b, @c, @d);
+    background-image: radial-gradient(@a, @b, @c, @d);
+}
+.linear-gradient(@a, @b, @c) {
+    background-image: -webkit-linear-gradient(@a, @b, @c);
+    background-image: -moz-linear-gradient(@a, @b, @c);
+    background-image: -ms-linear-gradient(@a, @b, @c);
+    background-image: -o-linear-gradient(@a, @b, @c);
+    background-image: linear-gradient(@a, @b, @c);
+}
+.transition(@a) {
+    -webkit-transition: @a;
+    -moz-transition: @a;
+    -o-transition: @a;
+    transition: @a;
+}
+.transition(@a, @b, @c) {
+    -webkit-transition: @a, @b, @c;
+    -moz-transition: @a, @b, @c;
+    -o-transition: @a, @b, @c;
+    transition: @a, @b, @c;
+}
+.background-size(@a) {
+    -webkit-background-size: @a;
+}
