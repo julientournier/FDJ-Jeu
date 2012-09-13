@@ -15,10 +15,10 @@ Original demo: http://cheezburger.herokuapp.com
 * Go into the folder, adjust the file - conf/config.json with your login credentials.
 * Back in your terminal, run the following
 
-    heroku create
-    git add .
-    git commit -m "This is awesome"
-    git push heroku master
+    'heroku create'
+    'git add .'
+    'git commit -m "This is awesome"'
+    'git push heroku master'
     
 ## That's cool, but I'm not serving cheezburgers to cats, what do I do?
 
@@ -26,9 +26,9 @@ Original demo: http://cheezburger.herokuapp.com
 * Change the following elements as needed
 * Images
     
-    Falling Burger: /web/img/burger.png (DONT RENAME)
-    Catching Cat: /web/img/cat.png (SRS, DONT RENAME)
-    Background: /web/img/red-bg.jpg (Totally rename. JUST KIDDING DONT RENAME)
+    *Falling Burger: '/web/img/burger.png (DONT RENAME)'
+    *Catching Cat: '/web/img/cat.png (SRS, DONT RENAME)'
+    *Background: '/web/img/red-bg.jpg (Totally rename. JUST KIDDING DONT RENAME)'
     
 * Titles/etc: Index.html, you'll probably want sse help here.
 
