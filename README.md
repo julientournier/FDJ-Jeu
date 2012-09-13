@@ -9,10 +9,14 @@ Original demo: http://cheezburger.herokuapp.com
 ## How do I get this working for *my* DiscoDonuts org?
 
 * Spin up a copy from the latest dot.
-* Create a Remote Access record for this application.
 * Create a folder to hold this in.
 * Pull down the code using `git clone https://github.com/cowie/FM-Heroku.git MyFolder`
-* Go into the folder, adjust the file `/conf/config.json` with your login credentials.
+* Go into the folder, adjust the file `/conf/config.json` with your login credentials. You'll get the first three items from `Setup->Develop->Remote Access->Cheezburger` 
+        Client ID = Consumer Key
+        Client Secret = Consumer Secret
+        Callback = Callback URL
+You'll get the next two from your username/password. To reset/get your security token (NEEDED), you'll need to go to `Setup->My Personal Information->Reset my Security Token' Put your pasword and token in together, like this: `SecretPassword123SUPERCRAZYTOKEN320432423423432`
+
 * Back in your terminal, run the following
 
     `heroku create`
