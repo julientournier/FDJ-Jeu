@@ -11,8 +11,8 @@ Original demo: http://cheezburger.herokuapp.com
 * Spin up a copy from the latest dot.
 * Create a Remote Access record for this application.
 * Create a folder to hold this in.
-* Pull down the code using "git clone https://github.com/cowie/FM-Heroku.git MyFolder"
-* Go into the folder, adjust the file - conf/config.json with your login credentials.
+* Pull down the code using `git clone https://github.com/cowie/FM-Heroku.git MyFolder`
+* Go into the folder, adjust the file `/conf/config.json` with your login credentials.
 * Back in your terminal, run the following
 
     `heroku create`
@@ -26,13 +26,17 @@ Original demo: http://cheezburger.herokuapp.com
 * Change the following elements as needed
 * Images
     *Falling Burger: `/web/img/burger.png (DONT RENAME)`
+    
     *Catching Cat: `/web/img/cat.png (SRS, DONT RENAME)`
+    
     *Background: `/web/img/red-bg.jpg (Totally rename. JUST KIDDING DONT RENAME)`
     
 * Titles/etc: Index.html, you'll probably want sse help here.
 
     Line 8: Title of app/page
+    
     Line 19: Actual header on page
+    
     Line 34: Instructions line
     
 
