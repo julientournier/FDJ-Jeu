@@ -1,9 +1,9 @@
 {
     "SALESFORCE": {
-        "clientId": "",
-        "clientSecret": "",
-        "redirectUri": "",
-        "username": "",
-        "passwordAndToken": ""
+        "clientId": "3MVG9y6x0357HleelLAwKkClXIvSCk7JFnjOlmtcyqD2F2UU5FtN_6o2MC_KKa6Z.dpwcIe8IASsog3b6c6p1;00DA0000000gYvQ",
+        "clientSecret": "150962387728147657",
+        "redirectUri": "https://pure-eyrie-8665.herokuapp.com",
+        "username": "discostu@discodonuts.demo",
+        "passwordAndToken": "salesforce1"
     }
 }
