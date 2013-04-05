@@ -34,7 +34,8 @@ $(document).ready(function() {
     // Bind touch/click events to buttons
     (function bindHandlers() {
         $('.burger').bind('touchend', showSubmitScore);
-        $('#play').bind('touchend', showInGame);
+    //    $('#play').bind('touchend', showInGame);
+    $('#play').bind('click', showInGame);
         $('#replay,#tryagain').bind('touchend', showInGame);
         $('#submit').bind('touchend', function() {
             $('#submit').attr('disabled', 'disabled');
