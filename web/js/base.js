@@ -4,7 +4,7 @@ $(document).ready(function() {
    // if (navigator.userAgent.toLowerCase().indexOf('mobile') == -1) {
      //   alert('This is a mobile game.\nPlease open the URL from your Android Ice Cream Sandwich or (preferably) iPhone 4S !');
         //return;
-    }
+   // }
 
 	// Display a message asking to add the app to the Home Screen
     if (navigator.userAgent.indexOf('iPhone') != -1) {
