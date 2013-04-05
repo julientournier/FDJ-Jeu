@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
     // Display message that it is a mobile app
-    if (navigator.userAgent.toLowerCase().indexOf('mobile') == -1) {
-        alert('This is a mobile game.\nPlease open the URL from your Android Ice Cream Sandwich or (preferably) iPhone 4S !');
+   // if (navigator.userAgent.toLowerCase().indexOf('mobile') == -1) {
+     //   alert('This is a mobile game.\nPlease open the URL from your Android Ice Cream Sandwich or (preferably) iPhone 4S !');
         //return;
     }
 
