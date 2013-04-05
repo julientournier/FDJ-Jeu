@@ -184,7 +184,7 @@ $(document).ready(function() {
         // Retrieve accounts (locations)
         firstTime && $.get('/api/locations', function(locations) {
             firstTime = false;
-            
+            console.log('got locations');
             var fillSelect= function() {
                 // Sort according to GPS coord distance to user
                 if (position) {
@@ -194,13 +194,14 @@ $(document).ready(function() {
                         return distA - distB;
                     });
                 }
+                console.log('sorted locations');
                 locations.forEach(function(el) {
                     $('<option/>', { 'value': el.id }).text(el.name).appendTo('#location');
                 });
                 $('#location-text').html('Select store location');
                 $('#location').css('opacity', '1');
             }
-            
+            console.log('about to get physical coords');
             // Try to get physical coordinates
             if (typeof(navigator.geolocation.getCurrentPosition) === 'function' && !position) {
                 navigator.geolocation.getCurrentPosition(function(pos){
@@ -211,6 +212,7 @@ $(document).ready(function() {
                 fillSelect();
             } 
         });
+        console.log('showSubmitScore completed');
     };
 
     // Show the high score panel
