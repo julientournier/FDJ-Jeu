@@ -217,6 +217,7 @@ $(document).ready(function() {
 
     // Show the high score panel
     function showHighScore() {
+    	console.log('running showHighScore');
         $('#submitscore').hide();
         $('#highscore').show();
         $('#highscores').html('<span>loading...</span>');
